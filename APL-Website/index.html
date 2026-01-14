@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambagan Premier League | APL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-trophy"></i>
+            <div class="logo-text">
+                <h1>APL</h1>
+                <span>Since 2017</span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li class="active" onclick="showSection('home')"><i class="fa-solid fa-house"></i> Home</li>
+            <li onclick="showSection('players')"><i class="fa-solid fa-users"></i> Players</li>
+            <li onclick="showSection('teams')"><i class="fa-solid fa-shield-halved"></i> Teams</li>
+            <li onclick="showSection('gallery')"><i class="fa-solid fa-images"></i> Gallery</li>
+            <li onclick="showSection('about')"><i class="fa-solid fa-circle-info"></i> About</li>
+            <li onclick="showSection('contact')" class="btn-contact">Contact</li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <section id="home" class="section active-section">
+        <div class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-icon"><i class="fa-solid fa-trophy"></i></div>
+                <h1>AMBAGAN <span class="highlight">PREMIER LEAGUE</span></h1>
+                <p class="tagline">The Spirit of Cricket Since 2017</p>
+                <p class="sub-text">Played in Debraj Mukharjee's Garden, Gobardanga</p>
+                <div class="hero-btns">
+                    <button onclick="showSection('players')" class="btn-primary">View Players</button>
+                    <button onclick="showSection('teams')" class="btn-secondary">Explore Teams</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h3>8+</h3>
+                <p>Years</p>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-users-line"></i>
+                <h3>20+</h3>
+                <p>Players</p>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-shield-cat"></i>
+                <h3>10</h3>
+                <p>Teams History</p>
+            </div>
+            <div class="stat-box">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>100+</h3>
+                <p>Matches</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Join Our Community</h2>
+            <p>Be part of the APL family. Join our WhatsApp group for updates, match schedules, and more!</p>
+            <a href="https://chat.whatsapp.com/BJXsA8Matse7vTUiJI3coN" target="_blank" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Join WhatsApp Group
+            </a>
+        </div>
+    </section>
+
+    <section id="players" class="section">
+        <div class="page-header">
+            <h1>Our Players</h1>
+            <p>Meet the talented cricketers of APL</p>
+        </div>
+        <div class="container">
+            <div class="players-grid" id="players-container">
+                </div>
+        </div>
+    </section>
+
+    <section id="teams" class="section">
+        <div class="page-header">
+            <h1>Our Teams</h1>
+            <p>10 legendary teams competing for glory</p>
+        </div>
+        
+        <div class="container">
+            <h2 class="section-title"><span class="dot"></span> Active Teams</h2>
+            <div class="active-teams-grid">
+                <div class="team-card large bsk">
+                    <div class="team-content">
+                        <h2>BSK</h2>
+                        <p>Babupara Super Kings</p>
+                        <span>Founded: 2017</span>
+                        <div class="team-stats">
+                            <div><h3>45</h3><p>Wins</p></div>
+                            <div><h3>23</h3><p>Losses</p></div>
+                            <div><h3>66%</h3><p>Win Rate</p></div>
+                        </div>
+                    </div>
+                    <div class="team-logo"><i class="fa-solid fa-shield"></i></div>
+                </div>
+                <div class="team-card large lc">
+                    <div class="team-content">
+                        <h2>LC</h2>
+                        <p>Library Capitals</p>
+                        <span>Founded: 2017</span>
+                        <div class="team-stats">
+                            <div><h3>42</h3><p>Wins</p></div>
+                            <div><h3>26</h3><p>Losses</p></div>
+                            <div><h3>62%</h3><p>Win Rate</p></div>
+                        </div>
+                    </div>
+                    <div class="team-logo"><i class="fa-solid fa-shield"></i></div>
+                </div>
+            </div>
+
+            <h2 class="section-title legend-title"><i class="fa-solid fa-crown"></i> Legend Teams</h2>
+            <div class="legend-teams-grid">
+                <div class="mini-team akr"><h3>AKR</h3><p>Ambagan Knight Riders</p></div>
+                <div class="mini-team gi"><h3>GI</h3><p>Ghatakpara Indians</p></div>
+                <div class="mini-team gsg"><h3>GSG</h3><p>Garhpara Super Giants</p></div>
+                <div class="mini-team rck"><h3>RCK</h3><p>Royal Challengers Kundupukur</p></div>
+                <div class="mini-team st"><h3>ST</h3><p>SundayClub Titans</p></div>
+                <div class="mini-team srk"><h3>SRK</h3><p>Sunrisers Khantura</p></div>
+                <div class="mini-team cr"><h3>CR</h3><p>Collegeground Royals</p></div>
+                <div class="mini-team ppks"><h3>PPKS</h3><p>PrasannaPark Kings</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="page-header">
+            <h1>Gallery</h1>
+            <p>Capturing the moments of APL</p>
+        </div>
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=1000&auto=format&fit=crop" alt="Cricket Match"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?q=80&w=1000&auto=format&fit=crop" alt="Stadium"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1593341646262-24174b0c3463?q=80&w=1000&auto=format&fit=crop" alt="Batting"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1000&auto=format&fit=crop" alt="Fielding"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1624194092789-947b9733d26d?q=80&w=1000&auto=format&fit=crop" alt="Cricket Ball"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1562077772-3bd305261131?q=80&w=1000&auto=format&fit=crop" alt="Players"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="page-header">
+            <h1>About APL</h1>
+            <p>The story of passion, cricket, and community in Gobardanga</p>
+        </div>
+        <div class="container about-container">
+            <div class="about-card">
+                <h2>Our Story</h2>
+                <p>Ambagan Premier League is played in Gobardanga, a small town in North 24 Parganas, West Bengal. Specifically located at Babupara in Debraj Mukharjee's Garden, where the league is played every day.</p>
+                <p>APL was founded by <strong>Alamgir Mondal</strong> in 2017. Since then, many teams like Ambagan Knight Riders and Babupara Super Kings have participated in this historic league.</p>
+            </div>
+            
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="avatar">SR</div>
+                    <h3>Soumik Roy</h3>
+                    <p class="role">APL Head & Website Creator</p>
+                    <p class="desc">Founder and visionary behind APL Tech.</p>
+                </div>
+                <div class="leader-card">
+                    <div class="avatar orange">SM</div>
+                    <h3>Samin Mondal</h3>
+                    <p class="role">APL Head</p>
+                    <p class="desc">Co-leader driving APL's success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="page-header">
+            <h1>Contact Us</h1>
+            <p>Get in touch with APL</p>
+        </div>
+        <div class="container contact-wrapper">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h3>Call Us / WhatsApp</h3>
+                        <p>+91 7699805121</p>
+                        <p>+91 6296083113</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <h3>WhatsApp Group</h3>
+                        <a href="https://chat.whatsapp.com/BJXsA8Matse7vTUiJI3coN" class="link-text">Join our community →</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Gobardanga, Babupara</p>
+                        <p>Landmark: Near Prasannamayee Saw Mill</p>
+                        <p>Pin: 743252, West Bengal, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <h2>Send Message</h2>
+                <form>
+                    <div class="input-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Enter your name">
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="Enter your phone number">
+                    </div>
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="Your message..."></textarea>
+                    </div>
+                    
+		<a href="https://chat.whatsapp.com/BJXsA8Matse7vTUiJI3coN">
+		<button type="button" class="btn-submit"> Send via WhatsApp</button></a>
+                </form>
+            </div>
+        </div>
+        
+        <div class="map-banner">
+            <i class="fa-solid fa-map-pin"></i>
+            <h3>Debraj Mukharjee's Garden</h3>
+            <p>Babupara, Gobardanga - 743252</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>APL</span>
+                </div>
+                <p>The premier cricket league of Gobardanga, bringing together the finest local talent since 2017.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a onclick="showSection('home')">Home</a>
+                <a onclick="showSection('players')">Players</a>
+                <a onclick="showSection('teams')">Teams</a>
+                <a onclick="showSection('gallery')">Gallery</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-phone"></i> 7699805121</p>
+                <p><i class="fa-solid fa-location-dot"></i> Gobardanga, Babupara</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2017-2026 Ambagan Premier League. Made with <span style="color:red;">&hearts;</span> by Soumik Roy</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
